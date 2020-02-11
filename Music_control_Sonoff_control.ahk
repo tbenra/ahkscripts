@@ -68,3 +68,13 @@ Return
 	Sleep, 500
 	SplashTextOff
 Return
+
+
+;Suche Google nach Zwischenablage
+^+c::
+{
+ Send, ^c
+ Sleep 50
+ Run, http://www.google.com/search?q=%clipboard%
+ Return
+}
