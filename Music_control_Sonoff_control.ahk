@@ -23,7 +23,7 @@ return
 ^F2::
 	;SoundBeep 500, 200
 	session := comobjcreate("WinHTTP.WinHttpRequest.5.1")
-	session.open("POST", "http://192.168.0.10:8080/rest/items/Bett_Lampe", 0)
+	session.open("POST", "http://192.168.0.9:8080/rest/items/Bett_Lampe", 0)
 	session.send("TOGGLE")
 	SplashTextOn, 250, 25, Erfolg!, Die Bett Lampe wurde umgeschaltet!
 	WinMove, Erfolg!, ,0,0
@@ -35,7 +35,7 @@ Return
 ^F1::
 	;SoundBeep 500, 200
 	session := comobjcreate("WinHTTP.WinHttpRequest.5.1")
-	session.open("POST", "http://192.168.0.10:8080/rest/items/Stereoanlage", 0)
+	session.open("POST", "http://192.168.0.9:8080/rest/items/Stereoanlage", 0)
 	session.send("TOGGLE")
 	SplashTextOn, 250, 25, Erfolg!, Die Stereoanlage wurde umgeschaltet!
 	WinMove, Erfolg!, ,0,0
@@ -48,21 +48,21 @@ Return
 ^F3::
 	;SoundBeep 500, 200
 	session := comobjcreate("WinHTTP.WinHttpRequest.5.1")
-	session.open("POST", "http://192.168.0.10:8080/rest/items/Bett_Spot", 0)
+	session.open("POST", "http://192.168.0.9:8080/rest/items/Bett_Spot", 0)
 	session.send("TOGGLE")
-	SplashTextOn, 250, 25, Erfolg!, Die Bett Lampe wurde umgeschaltet!
+	SplashTextOn, 250, 25, Erfolg!, Die Wand Lampe wurde umgeschaltet!
 	WinMove, Erfolg!, ,0,0
 	Sleep, 500
 	SplashTextOff
 Return
 
-;Schlafzimmer Lcihter an, Rest API
+;Schlafzimmer Lichter an, Rest API
 ^F4::
 	;SoundBeep 500, 200
 	session := comobjcreate("WinHTTP.WinHttpRequest.5.1")
-	session.open("POST", "http://192.168.0.10:8080/rest/items/Schlafzimmer_Lichter", 0)
+	session.open("POST", "http://192.168.0.9:8080/rest/items/Schlafzimmer_Lichter", 0)
 	session.send("TOGGLE")
-	SplashTextOn, 250, 25, Erfolg!, Die Bett Lampe wurde umgeschaltet!
+	SplashTextOn, 250, 25, Erfolg!, Die Lichter im Schlafzimmer wurden umgeschaltet!
 	WinMove, Erfolg!, ,0,0
 	Sleep, 500
 	SplashTextOff
@@ -72,7 +72,7 @@ Return
 ^F5::
 	;SoundBeep 500, 200
 	session := comobjcreate("WinHTTP.WinHttpRequest.5.1")
-	session.open("POST", "http://192.168.0.10:8080/rest/items/Fernseher_Lampe", 0)
+	session.open("POST", "http://192.168.0.9:8080/rest/items/Fernseher_Lampe", 0)
 	session.send("TOGGLE")
 	SplashTextOn, 300, 25, Erfolg!, Die Wohnzimmerlampe wurde umgeschaltet!
 	WinMove, Erfolg!, ,0,0
@@ -86,7 +86,7 @@ Return
 ^F10::
 	;SoundBeep 500, 200
 	session := comobjcreate("WinHTTP.WinHttpRequest.5.1")
-	session.open("POST", "http://192.168.0.10:8080/rest/items/Lichter", 0)
+	session.open("POST", "http://192.168.0.9:8080/rest/items/Lichter", 0)
 	session.send("TOGGLE")
 	SplashTextOn, 250, 25, Erfolg!, Alle Lichter wurden umgeschaltet!
 	WinMove, Erfolg!, ,0,0
@@ -102,3 +102,4 @@ Return
  Run, http://www.google.com/search?q=%clipboard%
  Return
 }
+
